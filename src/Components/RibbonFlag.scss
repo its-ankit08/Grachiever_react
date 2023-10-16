@@ -1,0 +1,36 @@
+@import "../css-config/mixins.scss";
+.flag {
+    background: #fff957;
+    width: 50px;
+    position: relative;
+    height:20px;
+    margin-left: -5px;
+    margin-top: 5px;
+    &::before {
+      content: "";
+      position: absolute;
+      border-style: solid;
+      bottom: -10px;
+      left: 0;
+      border-width: 0em 0.3em 0.7em 0;
+      border-color: transparent #b6d5de transparent transparent;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      border-style: solid;
+      top: 0;
+      right: -2em;
+      border-width: 5px 12px 12px 22px;
+      border-color: #fff957 transparent #fef969 #fffa73;
+      @include md{
+        border-width: 10px 15px 15px 20px;
+      }
+    }
+    @include md{
+      height: 25px;
+      width: 50px;
+    }
+
+  }
+  
